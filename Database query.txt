@@ -1,0 +1,68 @@
+create database Ecommerce
+use Ecommerce
+create table tbl_Admin(
+
+ad_id int identity primary key,
+ad_username nvarchar(50) not null unique,
+ad_password nvarchar(50) not null ,
+ad_createdon datetime
+
+)
+insert into tbl_Admin values('admin', 'admin123',GetDate())
+select *from tbl_Admin
+
+create table tbl_Category(
+
+cat_id int identity primary key,
+cat_name nvarchar(100) not null unique,
+cat_createdon datetime,
+cat_color nvarchar(20),
+cat_icon nvarchar(50) not null,
+cat_fk_Ad_id int foreign key references tbl_Admin(ad_id)
+)
+
+select *from tbl_Category
+
+
+create table tbl_product(
+
+pro_id int identity primary key,
+pro_name nvarchar(50) not null,
+pro_image1 nvarchar(50) not null,
+pro_image2 nvarchar(50),
+pro_image3 nvarchar(50),
+pro_desc nvarchar(200) not null,
+pro_price float,
+pro_fk_cat_id int foreign key references tbl_Category(cat_id)
+
+
+
+
+
+)
+select *from tbl_product
+
+create table tbl_Order(
+
+o_id int identity primary key,
+o_username nvarchar(50) not null,
+o_phone nvarchar(20) not null,
+o_createdon datetime,
+o_approved bit default 0 
+
+
+
+)
+select *from tbl_Order
+
+
+create table tbl_productsOrdered(
+
+op_id int identity primary key,
+op_pro_id int foreign key references tbl_product(pro_id),
+op_qty int,
+op_unitprice float,
+op_total float,
+op_fk_o_id int foreign key references tbl_Order(o_id)
+
+)

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceModelStoreContainer" CdmEntityContainer="EcommerceEntities">
+    <EntitySetMapping Name="tbl_Admin">
+      <EntityTypeMapping TypeName="EcommerceModel.tbl_Admin">
+        <MappingFragment StoreEntitySet="tbl_Admin">
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+          <ScalarProperty Name="ad_username" ColumnName="ad_username" />
+          <ScalarProperty Name="ad_password" ColumnName="ad_password" />
+          <ScalarProperty Name="ad_createdon" ColumnName="ad_createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Category">
+      <EntityTypeMapping TypeName="EcommerceModel.tbl_Category">
+        <MappingFragment StoreEntitySet="tbl_Category">
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="cat_name" ColumnName="cat_name" />
+          <ScalarProperty Name="cat_createdon" ColumnName="cat_createdon" />
+          <ScalarProperty Name="cat_color" ColumnName="cat_color" />
+          <ScalarProperty Name="cat_icon" ColumnName="cat_icon" />
+          <ScalarProperty Name="cat_fk_Ad_id" ColumnName="cat_fk_Ad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Order">
+      <EntityTypeMapping TypeName="EcommerceModel.tbl_Order">
+        <MappingFragment StoreEntitySet="tbl_Order">
+          <ScalarProperty Name="o_id" ColumnName="o_id" />
+          <ScalarProperty Name="o_username" ColumnName="o_username" />
+          <ScalarProperty Name="o_phone" ColumnName="o_phone" />
+          <ScalarProperty Name="o_createdon" ColumnName="o_createdon" />
+          <ScalarProperty Name="o_approved" ColumnName="o_approved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_product">
+      <EntityTypeMapping TypeName="EcommerceModel.tbl_product">
+        <MappingFragment StoreEntitySet="tbl_product">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+          <ScalarProperty Name="pro_image1" ColumnName="pro_image1" />
+          <ScalarProperty Name="pro_image2" ColumnName="pro_image2" />
+          <ScalarProperty Name="pro_image3" ColumnName="pro_image3" />
+          <ScalarProperty Name="pro_desc" ColumnName="pro_desc" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="pro_fk_cat_id" ColumnName="pro_fk_cat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_productsOrdered">
+      <EntityTypeMapping TypeName="EcommerceModel.tbl_productsOrdered">
+        <MappingFragment StoreEntitySet="tbl_productsOrdered">
+          <ScalarProperty Name="op_id" ColumnName="op_id" />
+          <ScalarProperty Name="op_pro_id" ColumnName="op_pro_id" />
+          <ScalarProperty Name="op_qty" ColumnName="op_qty" />
+          <ScalarProperty Name="op_unitprice" ColumnName="op_unitprice" />
+          <ScalarProperty Name="op_total" ColumnName="op_total" />
+          <ScalarProperty Name="op_fk_o_id" ColumnName="op_fk_o_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
