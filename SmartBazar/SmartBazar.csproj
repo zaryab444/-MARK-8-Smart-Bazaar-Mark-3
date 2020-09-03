@@ -149,6 +149,8 @@
     </Compile>
     <Compile Include="Models\Repository\CategoryRepository.cs" />
     <Compile Include="Models\Repository\ICategory.cs" />
+    <Compile Include="Models\Repository\IProduct.cs" />
+    <Compile Include="Models\Repository\ProductRepository.cs" />
     <Compile Include="Models\tbl_Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -165,6 +167,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModels\Category.cs" />
+    <Compile Include="Models\ViewModels\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +316,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\product.cshtml" />
+    <Content Include="Views\Home\productdetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

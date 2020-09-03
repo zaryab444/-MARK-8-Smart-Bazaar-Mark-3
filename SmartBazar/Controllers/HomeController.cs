@@ -18,6 +18,25 @@ namespace SmartBazar.Controllers
             return View();
         }
 
-        
+        public ActionResult product(int?id)
+        {
+            ProductRepository pr = new ProductRepository();
+            List<Product> li = pr.ViewProduct().Where(x => x.pro_fk_cat_id == id).ToList();
+            ViewBag.productlist = li;
+
+            return View();
+        }
+        public ActionResult productdetails(int?id)
+        {
+
+            ProductRepository pr = new ProductRepository();
+            if (id == null)
+            {
+                ViewData["data"] = pr.GetProductById((int)id);
+            }
+
+
+            return View();
+        }
     }
 }
