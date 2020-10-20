@@ -66,3 +66,35 @@ op_total float,
 op_fk_o_id int foreign key references tbl_Order(o_id)
 
 )
+
+
+select *from tbl_Category
+
+insert into tbl_Category values ('Electronics and Appliance',GetDate(),'red','fa fa-laptop',1)
+
+insert into tbl_Category values ('Mobile',GetDate(),'blue','fa fa-mobile',1)
+
+
+insert into tbl_Category values ('Furniture',GetDate(),'green','fa fa-wheelchair',1)
+
+
+insert into tbl_Category values ('Sports',GetDate(),'yellow','fa fa-futbol-o',1)
+
+insert into tbl_Category values ('Clothes',GetDate(),'brown','tshirt',1)
+
+insert into tbl_Category values ('Clothing',GetDate(),'purple','fas fa-tshirt',1)
+
+insert into tbl_Category values ('Books',GetDate(),'blue','fas fa-book',1)
+
+insert into tbl_Category values ('Food',GetDate(),'cyan','fa fa-cutlery',1)
+
+DELETE FROM tbl_Category WHERE cat_name='Books';
+
+
+
+select *from tbl_product
+
+insert into tbl_product values ('Redmi 9', 'F:\images\e3.png','','','New Latest technology available' , 20000,1)
+
+
+insert into tbl_product values ('Redmi 9', 'e3.png','e3.png','e3.png','New Latest technology available' , 20000,1)

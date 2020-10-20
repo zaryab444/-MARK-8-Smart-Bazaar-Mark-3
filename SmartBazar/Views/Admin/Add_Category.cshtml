@@ -1,0 +1,39 @@
+﻿@model SmartBazar.Models.tbl_Category
+
+@{
+    Layout = null;
+}
+
+
+
+@using (Html.BeginForm("Add_Category", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div> <h1>Ad Posting</h1></div>
+    @Html.TextBoxFor(x => x.cat_name, new { @class = "form-control", @placeholder = "Username" })
+
+
+
+    @Html.TextBoxFor(x => x.cat_color, new { @class = "form-control", @placeholder = "color" })
+
+
+
+    @Html.TextBoxFor(x => x.cat_icon, new { @class = "form-control", @placeholder = "color" })
+
+    @Html.EditorFor(x => x.cat_createdon, new { @value = DateTime.Now, @readonly = "readonly" })
+
+
+
+    <div class="form-group">
+
+        <input type="submit" value="Add" class="btn btn-primary " />
+
+    </div>
+
+
+
+
+
+
+
+}
+

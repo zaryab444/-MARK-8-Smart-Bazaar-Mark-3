@@ -48,7 +48,7 @@
                             <div class="col-md-3 product-grids">
                                 <div class="agile-products">
                                     <div class="new-tag"><h6>20%<br>Off</h6></div>
-                                    <a href="@Url.Action("productdetails",new { id = item.pro_id})"><img style="height:150px" @item.pro_image1></a>
+                                    <a href="@Url.Action("productdetails",new { id = item.pro_id})" style="height:150px; @item.pro_image1"></a>
                                     <div class="agile-product-text">
                                         <h5><a href="@Url.Action("productdetails",new { id = item.pro_id})">@item.pro_name</a></h5>
                                         <h6><del>@item.pro_price+200</del> @item.pro_price</h6>
